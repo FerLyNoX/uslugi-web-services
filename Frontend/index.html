@@ -38,9 +38,14 @@
 <main>
   <h2>Wyszukiwanie mecza (get)</h2>
   <form action="/search" method="get">
-  <label for="kraja">Znajdź mecz za parametrem: Kraj:</label>
-  <input type="text" id="kraja" name="kraj" required>
-  <button type="submit">Search</button>
+    <label for="kraja">Znajdź mecz za parametrem: Kraj:</label>
+    <input type="text" id="kraja" name="kraj" required>
+    <button type="submit">Search</button>
+  </form>
+
+    <form action="/allMatches" method="get">
+      <label>Znajdź wsystkie meczy: </label>
+      <button type="submit">Search</button>
     </form>
 </main>
 </body>

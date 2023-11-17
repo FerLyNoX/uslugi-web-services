@@ -34,6 +34,16 @@ app.get('/search', async (req, res) => {
   }
 });
 
+app.get('/allMatches', async (req, res) => {
+  try {
+    const result = await getKraj({});
+    res.json(result);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
