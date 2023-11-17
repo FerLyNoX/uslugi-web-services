@@ -17,15 +17,16 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/search', async (req, res) => {
+app.get('/search', async (req, res) => {
   try {
-    const { kraja } = req.body; // Pobierz wartość pola kraja z formularza
-    const query = { kraja: kraja }; // Utwórz obiekt zapytania do funkcji getKraj
+    const { kraj } = req.query;
+    const query = {$or:[{ krajb: kraj }, { kraja: kraj }]};
     const result = await getKraj(query);
-    if(result.length > 0 ) {
-      res.send(result);
+
+    if (result.length > 0) {
+      res.json(result);
     } else {
-      res.send(`Niestety nie znaleziono meczu z krajem: ${kraja}`);
+      res.send(`Niestety nie ma meczu z ${kraj}`);
     }
   } catch (error) {
     console.error('Error:', error);
