@@ -1,1 +1,4 @@
 http://www.cs.put.poznan.pl/mzakrzewicz/students/lab_ws_projekt.pdf
+zamienić html na to co jest w końcu strony http://www.cs.put.poznan.pl/mzakrzewicz/students/lab_ws_3.pdf
+dodać Swagger do projektu
+dodać metodę POST do dodawania meczu
