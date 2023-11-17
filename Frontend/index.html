@@ -4,14 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIFA Database Search</title>
+  <title>FIFA match finder</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>FIFA Database Search</h1>
+<header>
+  <h1>Welcome to FIFA match finder!</h1>
+</header>
+<main>
+  <h2>Wyszukiwanie mecza (get)</h2>
   <form action="/search" method="post">
-    <label for="kraja">Kraj:</label>
-    <input type="text" id="kraja" name="kraja" required>
-    <button type="submit">Search</button>
-  </form>
+  <label for="kraja">Znajdź mecz za parametrem: Kraj:</label>
+  <input type="text" id="kraja" name="kraja" required>
+  <button type="submit">Search</button>
+    </form>
+</main>
 </body>
 </html>
